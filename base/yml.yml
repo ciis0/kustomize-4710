@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: svc
+   labels:
+     my-label: "foo"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+  labels:
+    my-label: "foo"
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: svc2
+   labels:
+     my-label: "bar"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy2
+  labels:
+    my-label: "bar"

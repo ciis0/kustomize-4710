@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    my-annotation: blubb
+  labels:
+    my-label: foo
+  name: svc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    my-label: bar
+  name: svc2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    my-label: foo
+  name: deploy
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    my-label: bar
+  name: deploy2
